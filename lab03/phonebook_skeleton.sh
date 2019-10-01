@@ -8,7 +8,7 @@ if [ "$#" -lt 1 ]; then
 
 elif [ "$1" = "new" ]; then
   if [ ! -d $PHONEBOOK_ENTRIES ]; then
-    mkdir -p /$PHONEBOOK_ENTRIES
+    touch $PHONEBOOK_ENTRIES
     chmod 777 $PHONEBOOK_ENTRIES
   fi
 
