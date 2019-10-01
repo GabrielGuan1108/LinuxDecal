@@ -13,28 +13,28 @@ elif [ "$1" = "new" ]; then
   fi
 
 
-  Name="$2 $3 $4\n"
+  Name="$2 $3 $4"
   echo $Name
-  echo $Name > $PHONEBOOK_ENTRIES
+  echo $Name >> $PHONEBOOK_ENTRIES
     # YOUR CODE HERE #
 
 elif [ "$1" = "list" ]; then
     if [ ! -e $PHONEBOOK_ENTRIES ] || [ ! -s $PHONEBOOK_ENTRIES ]; then
         echo "phonebook is empty"
     else
-      echo $1
+      cat $PHONEBOOK_ENTRIES
         # YOUR CODE HERE #
     fi
 
 elif [ "$1" = "remove" ]; then
-    echo $1
+    sed '$2'd $PHONEBOOK_ENTRIES
     # YOUR CODE HERE #
 
 elif [ "$1" = "clear" ]; then
     # YOUR CODE HERE #
-    echo $1
+    echo "" > $PHONEBOOK_ENTRIES
 
 else
-    echo $1
+    grep $2 $PHONEBOOK_ENTRIES
      # YOUR CODE HERE #
 fi
