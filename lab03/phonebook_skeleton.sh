@@ -27,7 +27,7 @@ elif [ "$1" = "list" ]; then
     fi
 
 elif [ "$1" = "remove" ]; then
-    sed '/'$2'/d' $PHONEBOOK_ENTRIES
+    sed -i '/'$2'/d' $PHONEBOOK_ENTRIES
     # YOUR CODE HERE #
 
 elif [ "$1" = "clear" ]; then
