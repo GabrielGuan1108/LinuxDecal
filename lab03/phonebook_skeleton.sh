@@ -13,9 +13,9 @@ elif [ "$1" = "new" ]; then
   fi
 
 
-  Name="$2 $3 $4"
+  Name="$2 $3 $4\n"
   echo $Name
-  sed -i '$a $Name' $PHONEBOOK_ENTRIES
+  echo $Name > $PHONEBOOK_ENTRIES
     # YOUR CODE HERE #
 
 elif [ "$1" = "list" ]; then
