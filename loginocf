@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set timeout 30
+    spawn ssh tianyiguan@tsunami.ocf.berkeley.edu
+    expect "password:"
+    send "Iamthebestone1!@\r" #abcd1234 为密码
+    interact
